@@ -3,217 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampung Kubang Herang | Surga Tersembunyi</title>
-    <meta name="description" content="Website resmi Kampung Kubang Herang, sebuah desa asri dengan pemandangan alam yang memukau dan budaya yang kental.">
+    <title>Kubang Herang | Liquid Nature</title>
+    <meta name="description" content="Website resmi Kampung Kubang Herang dengan desain Liquid Glass Ultra-modern.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Outfit (modern sans) and Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <nav class="navbar" id="navbar">
+    <!-- Animated Light Orbs Background (Aurora Mesh) -->
+    <div class="aurora-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Floating Liquid Glass Navbar -->
+    <nav class="nav-glass" id="navbar">
         <div class="logo">
-            <span>Kubang</span>Herang
+            <span>K</span>H
         </div>
         <ul class="nav-links">
-            <li><a href="#beranda" class="active">Beranda</a></li>
-            <li><a href="#daya-tarik">Daya Tarik</a></li>
-            <li><a href="#tentang">Cerita Kami</a></li>
-            <li><a href="#galeri">Galeri Visual</a></li>
-            <li><a href="#lokasi">Lokasi</a></li>
+            <li><a href="#hero" class="active">Surga</a></li>
+            <li><a href="#about">Jelajahi</a></li>
+            <li><a href="#bento">Panorama</a></li>
+            <li><a href="#location">Kunjungi</a></li>
         </ul>
+        <a href="#location" class="btn-nav glass-button">KeSana</a>
         <div class="hamburger">
-            <i class="fas fa-bars"></i>
+            <i class="ph ph-list"></i>
         </div>
     </nav>
 
-    <header id="beranda" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h4 class="fade-up subtitle">Taman Surga di Bumi Sukabumi</h4>
-            <h1 class="fade-up delay-1">Keanggunan<br><span>Kubang Herang</span></h1>
-            <p class="fade-up delay-2">Menyatu dengan alam, menemukan kedamaian sejati di pelukan pedesaan Nusantara yang memukau dan tak terlupakan.</p>
-            <a href="#daya-tarik" class="btn fade-up delay-3"><span>Mulai Penjelajahan</span> <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="scroll-indicator fade-up delay-4">
-            <a href="#daya-tarik"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </header>
+    <!-- Mobile Menu Subplate -->
+    <div class="mobile-menu glass-panel">
+        <div class="close-menu"><i class="ph ph-x"></i></div>
+        <ul>
+            <li><a href="#hero">Surga</a></li>
+            <li><a href="#about">Jelajahi</a></li>
+            <li><a href="#bento">Panorama</a></li>
+            <li><a href="#location">Kunjungi</a></li>
+        </ul>
+    </div>
 
-    <!-- Fitur Unggulan (Features Section) Overlapping Hero -->
-    <section id="daya-tarik" class="features">
+    <!-- Liquid Hero Section -->
+    <section id="hero" class="hero">
         <div class="container">
-            <div class="features-grid">
-                <div class="feature-card scroll-reveal">
-                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Harmoni Alam</h3>
-                    <p>Udara bersih tanpa polusi dengan semilir angin pegunungan yang menyegarkan raga dan jiwa Anda.</p>
+            <div class="hero-glass-panel glass-panel scroll-reveal">
+                <div class="hero-content">
+                    <div class="glass-tag">✦ Masa Depan Pedesaan ✦</div>
+                    <h1>Hembusan <br><span class="glow-text">Oksigen Bumi</span></h1>
+                    <p>Kubang Herang menginkubator perpaduan magis antara elemen natural dengan teknologi kehidupan modern. Rasakan liquiditas waktu yang melambat dalam dekapan alam Sukabumi yang megah.</p>
+                    <div class="hero-actions">
+                        <a href="#bento" class="btn-primary glass-button">
+                            Masuk ke Dimensi Alam <i class="ph ph-sparkle"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="feature-card scroll-reveal delay-1">
-                    <div class="feature-icon"><i class="fas fa-tractor"></i></div>
-                    <h3>Terasering Hijau</h3>
-                    <p>Hamparan sawah yang membentang luas menyuguhkan pesona pemandangan dramatis ala pedesaan.</p>
-                </div>
-                <div class="feature-card scroll-reveal delay-2">
-                    <div class="feature-icon"><i class="fas fa-hands-holding-child"></i></div>
-                    <h3>Kehangatan Warga</h3>
-                    <p>Terima sapaan hangat dan senyuman tulus yang menjunjung tinggi tradisi dan keramahan budaya lokal.</p>
+                <div class="hero-image">
+                    <div class="image-mask">
+                        <img src="assets/img/kampung_hero.png" alt="Kubang Herang">
+                        <div class="img-highlight"></div>
+                    </div>
+                    <div class="glass-stats">
+                        <i class="ph ph-thermometer"></i>
+                        <div>
+                            <h2>24°C</h2>
+                            <span>Sangat Sejuk</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tentang / Cerita Kami Section -->
-    <section id="tentang" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image scroll-reveal">
-                    <img src="assets/img/kampung_gallery_1.png" alt="Sawah Kubang Herang" id="img-about">
-                    <div class="img-frame"></div>
-                </div>
-                <div class="about-text scroll-reveal delay-1">
-                    <h4 class="section-subtitle">Cerita Kami</h4>
-                    <h2>Menemukan Kembali<br>Ketenangan yang Hilang</h2>
-                    <p class="lead">Kampung Kubang Herang adalah representasi kemewahan alam yang perlahan mulai langka. Sebuah destinasi desa wisata yang menjaga otentisitas bumi persada.</p>
-                    <p>Berjalanlah menyusuri jalan setapak, biarkan jemari Anda menyentuh embun pagi di dedaunan, dan dengarkan simfoni alam yang bernyanyi. Di sinilah tempat segala kepenatan luruh, digantikan oleh kedamaian batin. Setiap senja yang jatuh di desa ini adalah mahakarya lukisan Tuhan yang tak ternilai harganya.</p>
-                    <ul class="about-list">
-                        <li><i class="fas fa-check"></i> <span>Lingkungan Asri & Terjaga</span></li>
-                        <li><i class="fas fa-check"></i> <span>Aksesibilitas Mudah Namun Tenang</span></li>
-                        <li><i class="fas fa-check"></i> <span>Pusat Relaksasi Alam Terbuka</span></li>
-                    </ul>
-                </div>
+    <!-- Liquid Infinite Marquee -->
+    <div class="marquee-wrapper">
+        <div class="glass-slider">
+            <div class="marquee">
+                <span>KUBANG HERANG</span>
+                <i class="ph-fill ph-asterisk"></i>
+                <span>PANORAMA ALAM</span>
+                <i class="ph-fill ph-asterisk"></i>
+                <span>SUKABUMI</span>
+                <i class="ph-fill ph-asterisk"></i>
+                <span>AIR JERNIH</span>
+                <i class="ph-fill ph-asterisk"></i>
+                <span>KETENANGAN</span>
+                <i class="ph-fill ph-asterisk"></i>
+                
+                <!-- Duplikat -->
+                <span>KUBANG HERANG</span>
+                <i class="ph-fill ph-asterisk"></i>
+                <span>PANORAMA ALAM</span>
+                <i class="ph-fill ph-asterisk"></i>
+                <span>SUKABUMI</span>
+                <i class="ph-fill ph-asterisk"></i>
+                <span>AIR JERNIH</span>
+                <i class="ph-fill ph-asterisk"></i>
+                <span>KETENANGAN</span>
+                <i class="ph-fill ph-asterisk"></i>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Galeri Section -->
-    <section id="galeri" class="gallery">
+    <!-- Liquid Glass Bento Grid -->
+    <section id="bento" class="bento">
         <div class="container">
-            <div class="section-header scroll-reveal">
-                <h4 class="section-subtitle">Mahakarya Visual</h4>
-                <h2>Galeri Alam Kubang Herang</h2>
-                <div class="divider"></div>
+            <div class="section-title scroll-reveal">
+                <h2>Cermin <span class="glow-text">Alam</span></h2>
             </div>
             
-            <div class="gallery-grid">
-                <!-- Image 1 -->
-                <div class="gallery-item scroll-reveal">
-                    <img src="assets/img/kampung_hero.png" alt="Pemandangan Kampung">
-                    <div class="gallery-overlay">
-                        <div class="overlay-content">
-                            <h3>Pesona Senja</h3>
-                            <p>Keagungan ciptaan alam</p>
-                        </div>
+            <div class="bento-grid">
+                <!-- Bento Large Image -->
+                <div class="glass-panel card-img card-large scroll-reveal">
+                    <img src="assets/img/kampung_gallery_1.png" alt="Sawah">
+                    <div class="glass-overlay">
+                        <h3>Hamparan Zamrud</h3>
+                        <p>Terasering hijau abadi yang menyejukkan retina Anda</p>
                     </div>
                 </div>
-                <!-- Image 2 -->
-                <div class="gallery-item scroll-reveal delay-1">
-                    <img src="assets/img/kampung_gallery_2.png" alt="Kegiatan Desa">
-                    <div class="gallery-overlay">
-                        <div class="overlay-content">
-                            <h3>Aktivitas Pagi</h3>
-                            <p>Kearifan lokal budaya</p>
-                        </div>
+
+                <!-- Bento Info 1 -->
+                <div class="glass-panel card-info scroll-reveal delay-1">
+                    <div class="icon-liquid"><i class="ph ph-wind"></i></div>
+                    <h3>Kemurnian</h3>
+                    <p>Udara yang belum terjamah polusi, langsung dari pepohonan purba peninggalan alam.</p>
+                </div>
+
+                <!-- Bento Small Image -->
+                <div class="glass-panel card-img card-sm scroll-reveal delay-2">
+                    <img src="assets/img/kampung_gallery_2.png" alt="Kegiatan">
+                    <div class="glass-overlay">
+                        <h3>Otentik</h3>
                     </div>
                 </div>
-                <!-- Image 3 -->
-                <div class="gallery-item scroll-reveal delay-2">
-                    <img src="assets/img/kampung_gallery_1.png" alt="Sawah Hijau">
-                    <div class="gallery-overlay">
-                        <div class="overlay-content">
-                            <h3>Hamparan Sawah</h3>
-                            <p>Karpet hijau yang menenangkan</p>
-                        </div>
+
+                <!-- Bento Stats -->
+                <div class="glass-panel card-stats scroll-reveal">
+                    <div class="stat-glass">
+                        <h2>100%</h2>
+                        <p>Kelestarian Alam</p>
                     </div>
+                    <div class="stat-glass mt-3">
+                        <h2>∞</h2>
+                        <p>Energi Positif</p>
+                    </div>
+                </div>
+
+                <!-- Bento Wide -->
+                <div class="glass-panel card-wide scroll-reveal delay-1">
+                    <div class="wide-content">
+                        <h3>Budaya Kristal</h3>
+                        <p>Kehangatan dan kebijaksanaan lokal yang diturunkan, jernih seperti mata air, siap membasuh segala penat dari rutinitas modern Anda.</p>
+                    </div>
+                    <div class="icon-massive"><i class="ph ph-drop"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Location Section -->
-    <section id="lokasi" class="location">
-        <div class="container">
-            <div class="location-content scroll-reveal">
-                <h4 class="section-subtitle">Arahkan Langkah Anda</h4>
-                <h2>Temukan Kedamaian Anda</h2>
-                <div class="divider"></div>
-                <p>Kubang Herang menanti kehadiran Anda. Tidak terlalu jauh dari jangkauan, namun cukup untuk mengasingkan diri dari hiruk-pikuk rutinitas harian.</p>
-                <div class="map-wrapper">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.3541604724857!2d106.6749102!3d-6.9155518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e682f2cce31b147%3A0xe37ce7277bd6aafc!2sKubang%20Herang!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="map-info">
-                        <div class="info-block">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Alamat</h4>
-                                <span>Kubang Herang, Sukabumi</span>
-                            </div>
-                        </div>
-                        <div class="info-block">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Waktu Terbaik</h4>
-                                <span>06.00 Pagi / 16.00 Sore</span>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Liquid Location CTA -->
+    <section id="location" class="location">
+        <div class="container container-sm">
+            <div class="glass-panel cta-panel scroll-reveal">
+                <h2>Cairkan Kebekuan Jiwa</h2>
+                <p>Kubang Herang lebih dari sekadar titik di peta. Ini adalah portal menuju ketenangan paripurna.</p>
+                
+                <div class="map-glass-container mt-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.3541604724857!2d106.6749102!3d-6.9155518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e682f2cce31b147%3A0xe37ce7277bd6aafc!2sKubang%20Herang!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-overlay-glare"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Banner -->
-    <section class="cta-banner scroll-reveal">
-        <div class="cta-overlay"></div>
-        <div class="container cta-content">
-            <h2>Bersiaplah Menjadi Bagian dari Alam?</h2>
-            <p>Jadikan Kubang Herang sebagai tempat pelarian sempurna Anda akhir pekan ini.</p>
-            <a href="#lokasi" class="btn btn-light">Rencanakan Perjalanan <i class="fas fa-paper-plane"></i></a>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Liquid Footer -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <span>Kubang</span>Herang
-                    </div>
-                    <p>Membawa kembali esensi kemewahan pedesaan melalui pelestarian alam dan harmonisasi budaya lokal. Menjadi destinasi pelarian sempurna untuk jiwa yang lelah.</p>
-                    <div class="footer-socials">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+            <div class="glass-panel footer-glass">
+                <div class="footer-brand">
+                    <h2>KUBANG HERANG.</h2>
+                    <p>The Liquid Nature Retreat</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Tautan Cepat</h4>
-                    <ul>
-                        <li><a href="#beranda">Beranda</a></li>
-                        <li><a href="#daya-tarik">Daya Tarik</a></li>
-                        <li><a href="#tentang">Cerita Kami</a></li>
-                        <li><a href="#galeri">GaleriVisual</a></li>
-                    </ul>
+                <div class="footer-socials">
+                    <a href="#" class="glass-icon"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" class="glass-icon"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#" class="glass-icon"><i class="ph ph-compass"></i></a>
                 </div>
-                <div class="footer-contact">
-                    <h4>Butuh Bantuan?</h4>
-                    <p><i class="fas fa-envelope"></i> info@kubangherang.id</p>
-                    <p><i class="fas fa-phone-alt"></i> +62 811-2345-6789</p>
-                    <p><i class="fas fa-map-pin"></i> Kubang Herang, Jawa Barat</p>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Dimensi Kubang Herang. All rights reserved.</p>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Kampung Kubang Herang. Seluruh Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
