@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kubangherang.vercel.app/sitemap.xml
+Sitemap: https://webkubang.vercel.app/sitemap.xml
