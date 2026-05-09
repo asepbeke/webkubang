@@ -64,6 +64,7 @@ h1, h2, h3, h4 {
 .glow-text {
     background: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 40px rgba(0, 255, 135, 0.3);
 }
@@ -511,6 +512,7 @@ h1, h2, h3, h4 {
     font-size: 2.5rem;
     background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.5) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .stat-glass p { color: var(--orb-2); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;}
@@ -642,6 +644,80 @@ footer {
     .cta-panel { padding: 40px 20px; }
 }
 
+/* ======= MOBILE MENU (CSS ONLY) ======= */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    background: rgba(5, 10, 8, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transform: scale(1.05);
+}
+.mobile-menu.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+}
+.mobile-menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.mobile-menu li {
+    margin: 25px 0;
+}
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: inline-block;
+}
+.mobile-menu.active a {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Stagger links */
+.mobile-menu.active li:nth-child(1) a { transition-delay: 0.1s; }
+.mobile-menu.active li:nth-child(2) a { transition-delay: 0.2s; }
+.mobile-menu.active li:nth-child(3) a { transition-delay: 0.3s; }
+.mobile-menu.active li:nth-child(4) a { transition-delay: 0.4s; }
+
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: background 0.3s, transform 0.3s;
+}
+.close-menu:active {
+    transform: scale(0.9);
+    background: rgba(255,255,255,0.2);
+}
+
 /* Base Interactions */
 .scroll-reveal {
     opacity: 0;
@@ -654,3 +730,83 @@ footer {
 }
 .delay-1 { transition-delay: 0.15s; }
 .delay-2 { transition-delay: 0.3s; }
+
+/* ======= MOBILE PERFORMANCE OVERRIDES ======= */
+@media (max-width: 768px) {
+    /* 1. Eliminate heavy blur, fallback to dark semi-transparent backgrounds */
+    .glass-panel {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* simplified shadow */
+    }
+    .orb {
+        filter: blur(40px); /* huge reduction in GPU strain */
+    }
+    .orb-1, .orb-2 {
+        opacity: 0.3; /* lower opacity for smoother blend */
+        width: 80vw;
+        height: 80vw;
+    }
+    .noise-overlay {
+        display: none !important; /* Disable expensive fractal noise completely */
+    }
+    
+    /* 2. Better Mobile Spacing & Aesthetics */
+    .hero {
+        padding: 130px 0 60px;
+    }
+    .hero h1 { 
+        font-size: 2.6rem; 
+        margin-bottom: 15px; 
+        line-height: 1.15;
+    }
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    .glass-tag {
+        margin-bottom: 20px;
+    }
+    .hero-content {
+        padding: 30px 20px;
+    }
+    .hero-image {
+        height: 300px;
+    }
+    .glass-stats {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        justify-content: center;
+        padding: 15px 20px;
+    }
+    
+    .section-title h2 {
+        font-size: 2.5rem;
+    }
+    
+    .card-wide {
+        padding: 30px 20px;
+    }
+    .wide-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-panel {
+        padding: 30px 15px;
+    }
+    .cta-panel h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-glass {
+        padding: 30px 20px;
+    }
+    
+    .nav-glass {
+        height: 65px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        background: rgba(10, 15, 12, 0.7);
+    }
+}

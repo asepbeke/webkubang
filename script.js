@@ -16,30 +16,15 @@ const mobileLinks = document.querySelectorAll('.mobile-menu a');
 
 const toggleMenu = (open) => {
     if (open) {
-        mobileMenu.style.opacity = '1';
-        mobileMenu.style.pointerEvents = 'all';
+        navbar.classList.add('menu-open');
+        mobileMenu.classList.add('active');
         document.body.style.overflow = 'hidden';
     } else {
-        mobileMenu.style.opacity = '0';
-        mobileMenu.style.pointerEvents = 'none';
-        document.body.style.overflow = 'auto';
+        navbar.classList.remove('menu-open');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
     }
 }
-
-// Ensure proper initial state for mobile menu
-mobileMenu.style.position = 'fixed';
-mobileMenu.style.inset = '0';
-mobileMenu.style.zIndex = '2000';
-mobileMenu.style.display = 'flex';
-mobileMenu.style.flexDirection = 'column';
-mobileMenu.style.justifyContent = 'center';
-mobileMenu.style.alignItems = 'center';
-mobileMenu.style.opacity = '0';
-mobileMenu.style.pointerEvents = 'none';
-mobileMenu.style.transition = 'opacity 0.4s ease';
-mobileMenu.style.background = 'rgba(5, 10, 8, 0.9)';
-mobileMenu.style.backdropFilter = 'blur(30px)';
-mobileMenu.style.webkitBackdropFilter = 'blur(30px)';
 
 hamburger.addEventListener('click', () => toggleMenu(true));
 closeBtn.addEventListener('click', () => toggleMenu(false));
@@ -48,6 +33,8 @@ mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(fals
 // 3D Glass Tilt Effect for Desktop (Mouse Move)
 const glassPanels = document.querySelectorAll('.hero-glass-panel, .card-info, .card-stats, .card-wide');
 
+// Skip expensive 3D listeners on touch devices
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
 glassPanels.forEach(panel => {
     panel.addEventListener('mousemove', (e) => {
         const rect = panel.getBoundingClientRect();
@@ -69,6 +56,7 @@ glassPanels.forEach(panel => {
         panel.style.transition = 'transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
     });
 });
+}
 
 // Fluid Scroll Reveal
 const revealElements = document.querySelectorAll('.scroll-reveal');
